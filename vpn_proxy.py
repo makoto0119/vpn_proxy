@@ -14,13 +14,14 @@ def GetWindowRectFromName(TargetWindowTitle:str)-> tuple:
 
 # proxy を解除
 webbrowser.open('ms-settings:network-proxy')
-time.sleep(2) #描画を待つ
+
 # 範囲指定
 target_range = (GetWindowRectFromName('設定'))
+time.sleep(2) #描画を待つ
 
 p = pag.locateOnScreen(os.path.dirname(__file__)+'\proxy_on.png',
- confidence=.6, region=target_range)
- # grayscale=True, confidence=.6, region=target_range)
+ confidence=.7, region=target_range)
+#grayscale=True,
 
 if p: 
     x, y = pag.center(p)
