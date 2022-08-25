@@ -17,7 +17,7 @@ webbrowser.open('ms-settings:network-proxy')
 
 # 範囲指定
 target_range = (GetWindowRectFromName('設定'))
-time.sleep(2) #描画を待つ
+time.sleep(3) #描画を待つ
 
 p = pag.locateOnScreen(os.path.dirname(__file__)+'\proxy_on.png',
  confidence=.7, region=target_range)
